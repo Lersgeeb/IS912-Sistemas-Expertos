@@ -1,0 +1,40 @@
+<table>
+  <tr>
+    <td colspan="3">
+      <h3><b>Factura</b></h3>
+    </td>
+  </tr>
+  <tr>
+    <th class="subs">Orden</th>
+    <th>Cantidad</th>
+    <th>Precio</th>
+  </tr>
+    <tr *ngFor="let order of orders">
+      <td class="subs text-color">{{order.info.name}}</td>
+      <td class="text-color">{{order.amount}}</td>
+      <td class="text-color">L.{{order.info.price}}</td>
+    </tr>
+    <hr>
+    <tr>
+      <td colspan="2" class="subs">Subtotal</td>
+      <td class="text-color">L.{{sub}}</td>
+    </tr>
+    <tr>
+      <td colspan="2" class="subs">ISV</td>
+      <td class="text-color">L.{{isv}}</td>
+    </tr>
+    <tr>
+      <td colspan="2" class="subs">Comision Admin</td>
+      <td class="text-color">L.{{admin_commision}}</td>
+    </tr>
+    <tr>
+      <td colspan="2" class="subs">Comision motorista</td>
+      <td class="text-color">L.{{delivery_commision}}</td>
+    </tr>
+    <hr>
+    <tr>
+      <td colspan="2" class="subs"><b>Total</b></td>
+      <td class="text-color">L.{{total}}</td>
+    </tr>
+    
+</table>

@@ -1,0 +1,32 @@
+@import 'variables';
+
+.btn-container{
+    display: flex;
+    justify-content: center;
+}
+
+.btn-pick-order{
+    border: 2px solid;
+    border-color: $main-color;
+    background-color: white;
+    color: $dark-main-color;
+    font-size: 18px;
+    margin-top: 2em;
+    height: 43px;
+    width: 12em;
+    border-radius: 5px;
+    box-shadow: none;
+}
+
+.btns-access{
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+    margin-top: 1em;
+}
+
+.btn-access{
+    font-size: 18px;
+    color: $dark-main-color;
+    margin-bottom: 1.8em;
+}

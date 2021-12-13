@@ -1,0 +1,13 @@
+@import 'variables';
+
+.btn-invoice{
+    border: 2px solid;
+    border-color: $main-color;
+    background-color: white;
+    color: $dark-main-color;
+    font-size: 18px;
+    margin-top: 4em;
+    margin-left: 1.8em;
+    height: 43px;
+    border-radius: 5px;
+}

@@ -1,0 +1,42 @@
+<div class="all-order-component">
+    <div class="order-list">
+        <div class="title-order-list">
+            Ordenes activas
+        </div>
+        <div class="item-list">
+
+            <div class="item" *ngFor="let order of pending_orders">
+                <img src="{{order.business_logo}}" alt="">
+                <div class="item-desc">
+                    <div class="desc">
+                        <div class="product-info">
+                            <div class="user-fullname">
+                                {{order.business_name}}
+                            </div>
+                            <div class="location">
+                                {{order.customer_name}}
+                            </div>
+                        </div>
+                        <div class="order-info">
+                            <div class="price">
+                                {{order.order.order_products.length}} productos
+                            </div>
+                        </div>
+                    </div>
+                    <div class="delivery-info">
+                        <div class="moto-icon">
+                            <img src="assets/icons/delivery-man/moto.svg" alt="">
+                        </div>
+                        <div class="delivery-name">
+                            {{order.delivery_man_name}}
+                        </div>
+                        <div class="delivery-state">
+                            {{order.order.delivery_state}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

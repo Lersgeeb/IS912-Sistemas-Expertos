@@ -1,0 +1,36 @@
+@import 'variables';
+
+.popular-business{
+    margin-bottom: 3em;
+    text-align: center  ;
+    p{
+        color: $main-color;
+        font-size: 24px;
+        
+    }
+    
+    .business{
+        position: relative;
+        margin-top: 1.5em;
+        
+    }
+
+    .bg-business{
+        padding: 0.3em 0;
+        position: absolute;
+        left: 0;
+        right: 2px;
+        bottom: 3px;
+        
+        text-align: center;
+        font-size: 24px;
+        color: white;
+        background-color: #000000af;
+        margin-left: 30%;
+    }
+
+    
+    #bus-img{
+        margin-left: -1px;
+    }
+}

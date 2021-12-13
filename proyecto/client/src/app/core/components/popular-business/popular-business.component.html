@@ -1,0 +1,12 @@
+<div class="popular-business">
+    <p><b>¡NEGOCIOS EN AUGE!</b></p>
+    <div class="business" *ngFor="let busi of business">
+        <img [src]="busi.logo" alt="">
+        <img [src]="busi.img" alt="" id="bus-img">
+        <div class="bg-business">
+           {{ busi.name }} 
+        </div>
+    </div>
+</div>
+
+

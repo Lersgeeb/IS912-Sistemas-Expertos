@@ -1,0 +1,7 @@
+<div class="view-pad">
+    <app-back-button route='/cart/order' text="Orden"></app-back-button>
+    <ng-template [ngIf]="showInvoice">
+        <app-invoice [orders]="invoice.order_products"></app-invoice>
+    </ng-template>
+    <button class="btn-invoice" routerLink="/data-order" type="button" mat-raised-button color="primary">Agregar Datos de Compra</button>
+</div>

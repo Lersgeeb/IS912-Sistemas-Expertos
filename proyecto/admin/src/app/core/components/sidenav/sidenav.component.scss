@@ -1,0 +1,25 @@
+@import 'variables';
+
+img{
+    padding-right: 20px;
+    padding-left: 15px;
+}
+
+.item:hover{
+    background-color: $dark-main-color-lighter;
+    border-radius: 5px;
+}
+
+.item{
+    color: white;
+}
+
+.active{
+    background-color: $main-color;
+    border-radius: 5px;
+}
+
+.item.active:hover{
+    background-color: $main-color;
+    border-radius: 5px;
+}

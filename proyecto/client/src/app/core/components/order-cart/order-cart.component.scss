@@ -1,0 +1,49 @@
+@import 'variables';
+:host{
+    display: flex;
+}
+
+.item{
+    position: relative;
+    width: 100%;
+    .item-desc{
+        .desc{
+            width: 100%;
+            font-size: 18px;
+            font-weight: 500;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .order-info{
+                display: flex;
+                justify-content: space-between;
+                .price{
+                    color: $main-color;
+                }
+            }
+            .business-name{
+                font-size: 14px;
+                font-weight: 400;
+                color: $gray-secondary;
+            }
+        }
+    }
+    .remove-btn{
+        cursor: pointer;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0 10px 0 0;
+        
+        background-color: $dark-main-color;
+        color: white;
+        width: 2.5em;
+        height: 2.5em;
+        right: 0em;
+        top: 0em
+    }
+    .remove-btn:active{
+        background-color: $dark-main-color-light;
+    }
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Spotify</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/all.css"><!--FontAwesome-->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <nav class="navbar fixed-bottom">
+        <div class="nav-menu" id="nav-container">
+            <div class="nav-item" onclick="showPlaylists()">
+                <i class="fas fa-icons"></i>
+                <div class="text-nav-item">Playlisyts</div>
+            </div>
+            <div class="nav-item active" onclick="showArtists()">
+                <i class="fas fa-headphones-alt"></i>
+                <div  class="text-nav-item">Artistas</div>
+            </div>
+            <div class="nav-item">
+                <i class="far fa-user"></i>
+                <div class="text-nav-item">Usuario</div>
+            </div>
+        </div>
+    </nav>
+    
+    <section class="curent-song-container" id="curent-song-container">
+        <div class="current-song-visual">
+            <div class="current-song-info">
+                <div class="album-currrent-song">
+                    <img src="./img/covers/cover1.jpg" alt="">
+                </div>
+                <div class="desc-current-song">
+                    <div class="name-current-song">
+                        Coloratura
+                    </div>
+                    <div class="name-current-artist">
+                        Coldplay
+                    </div>
+                </div>
+            </div>
+            <div class="options-current-song">
+                <i class="fas fa-plus-square"></i>
+                <i class="fas fa-play"></i>
+            </div>
+        </div>
+    </section>
+    
+
+    <main>
+        <div class="display-content-list" id="content-list-component">
+            
+        </div>
+
+        <div class="userlist" id="userlist-component">
+            
+        </div>
+    </main>   
+    
+    <!-- Modal -->
+    <div class="modal fade" id="addSongPlaylist" tabindex="-1" role="dialog" aria-labelledby="addSongPlaylistTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="form-group">
+
+                        <select class="form-control" name="playlist-id" id="playlist-select">
+                            
+                        </select>
+
+                    </div>
+                    <div class="save-button">
+                        <button type="button" onclick="addSong()">Guardar</button>
+                    </div>
+                </div>     
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/controlador.js"></script>
+</body>
+</html>

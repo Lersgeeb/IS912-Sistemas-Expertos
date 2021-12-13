@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Amazon Appstore</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/all.css"><!--FontAwesome-->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-md fixed-top">
+        <img src="./img/logo.png" alt="">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <div class="navbar-nav mr-auto"></div>
+            <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+            <button class="btn btn-secondary my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+    </nav>
+        
+    <main role="main" class="container">
+
+        <div class="dropdown-seg  mb-4 mt-1">
+            <div class="dropdown">
+                <button class="btn btn-white dropdown-toggle" id="categories-select" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  
+                </button>
+                <div class="dropdown-menu" id="categories-options" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="cards-seg" id="cards-div">
+
+            <div class="card mb-3">
+                <div class="card-img px-2 pt-2">
+                    <img src="./img/app-icons/1.webp" class="card-img-top" alt="...">
+                </div>
+                <div class="card-body p-2">
+                  <h5 class="card-title mb-0">App 1</h5>
+                  <p class="card-dev mb-2">Desarrollador 1</p>
+
+                  <div class="stars-seg">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </div>
+                  <h5 class="card-price">$3.12</h5>
+                  
+                </div>
+            </div>    
+            
+        </div>
+
+        
+
+        <!--App Desc Modal -->
+        <div class="modal fade" id="appDescModal" tabindex="-1" role="dialog" aria-labelledby="appDescModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                
+
+                    <div class="modal-body p-4">
+                        <div id="carouselExampleControls " class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./img/app-screenshots/1.webp" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./img/app-screenshots/2.webp" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./img/app-screenshots/3.webp" class="d-block w-100" alt="...">
+                            </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                        <div class="break-line"></div>
+                        
+                        <div class="app-header-modal" id="header-modal-seg">
+                            <img src="./img/app-icons/1.webp" alt="">
+                            <div>
+                                <div class="card-body p-2">
+                                    <h5 class="title-app-modal">App 1</h5>
+                                    <p class="dev-app-modal mb-0">Desarrollador 1</p>
+                                    <p class="desc-app-modal mb-1">Lorem ipsum dolor sit amet consectetur ad quibusdam adipisci commodi vero fugit rerum ad.</p>
+                                    <h5 class="price-app-modal mb-4">$3.12</h5>
+                
+                                    <div class="stars-app-modal mb-2">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <strong> &nbsp 4.9</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="break-line"></div>
+
+                        <div class="app-comment-modal" id="comment-modal-seg">
+                            <div class="comment-user">
+                                <div class="mx-3 my-auto">
+                                    <img src="./img/user.webp" alt="">
+                                </div>
+                                <div class="comment-segment">
+                                    <strong>usuario 1</strong>
+                                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur ad quibusdam adipisci commodi</p>
+                                </div>
+                            </div>
+                            <div class="comment-user">
+                                <div class="mx-3 my-auto">
+                                    <img src="./img/user.webp" alt="">
+                                </div>
+                                <div class="comment-segment">
+                                    <strong>usuario 1</strong>
+                                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur ad quibusdam adipisci commodi</p>
+                                </div>
+                            </div>
+                            <div class="comment-user">
+                                <div class="mx-3 my-auto">
+                                    <img src="./img/user.webp" alt="">
+                                </div>
+                                <div class="comment-segment">
+                                    <strong>usuario 1</strong>
+                                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur ad quibusdam adipisci commodi</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="modal-buttons mt-4" id="modal-button-seg">
+
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary ml-2">Save changes</button>
+                        </div>
+
+
+                    </div>    
+                </div>
+            </div>
+        </div>
+
+        <!--add app Modal -->
+        <div class="modal fade" id="addAppModal" tabindex="-1" role="dialog" aria-labelledby="addAppModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="addAppModalLabel">Agregar una App</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                            <label for="url-new-app">URL imagen</label>
+                            <input type="text" class="form-control" id="url-new-app">
+                            </div>
+
+                            <div class="form-group">
+                            <label for="name-new-app">Nombre Aplicación</label>
+                            <input type="text" class="form-control" id="name-new-app">
+                            </div>
+
+                            <div class="form-group">
+                            <label for="dev-new-app">Desarrolador</label>
+                            <input type="text" class="form-control" id="dev-new-app">
+                            </div>
+
+                            <div class="form-group">
+                            <label for="dev-new-app">Precio</label>
+                            <input class="form-control" type="number" name="price-new-app" id="price-new-app" min="0" value="0" step=".01">
+
+                            </div>
+
+                            <div class="form-group">
+                                <label for="desc-new-app">Descripción</label>
+                                <textarea class="form-control" id="desc-new-app" rows="3"></textarea>
+                            </div>
+                
+                            <button type="submit" class="btn btn-primary" onclick="createNewApp()">Submit</button>
+                        </form>
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+    
+    
+    </main>
+
+      <!-- Button trigger modal -->
+    <button type="button" class="add-app" data-toggle="modal" data-target="#addAppModal">
+        <i class="fas fa-plus"></i>
+    </button>
+    
+            
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/controlador.js"></script>
+</body>
+</html>

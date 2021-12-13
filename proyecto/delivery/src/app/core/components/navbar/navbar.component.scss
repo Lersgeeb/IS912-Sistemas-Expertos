@@ -1,0 +1,23 @@
+@import 'variables';
+
+:host{
+    display: block;
+}
+
+.navbar{
+    z-index: 1;
+    background-color: white;
+    display: flex;
+    width: 100vw;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    padding: 1em 0em;
+    border-top: 2px #E5E5E5 solid;
+    
+    fa-icon{
+        color: $dark-main-color;
+        font-size: 1.8em;
+    }
+}

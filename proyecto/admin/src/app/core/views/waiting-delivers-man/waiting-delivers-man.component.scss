@@ -1,0 +1,37 @@
+@import 'variables';
+table {
+    width: 60%;
+    margin-top: 100px;
+    margin-left: 20em;
+}
+
+.add-product {
+    background-color: $main-color;
+    border-color: $main-color;
+}
+
+mat-paginator {
+    background-color: #fafafa;
+    margin-top: 90px;
+}
+
+.paginator {
+    width: 60%;
+}
+
+img {
+    padding-left: 15px;
+}
+
+.th {
+    text-align: center;
+}
+
+td {
+    text-align: center;
+}
+
+.decision-btn {
+    background-color: white;
+    border: white
+}

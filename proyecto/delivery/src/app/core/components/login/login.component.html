@@ -1,0 +1,40 @@
+<form 
+  class="login-form"
+  [formGroup]="loginForm" 
+  (submit)="handlerLogin()"
+>
+    <mat-form-field class="login-full-width" appearance="fill">
+      <mat-label>Correo</mat-label>
+      <input 
+        formControlName="email"
+        matInput placeholder="myemail@gmail.com" 
+        type="email" 
+        required
+      >
+    </mat-form-field>
+  
+    <mat-form-field class="login-full-width" appearance="fill">
+        <mat-label>Contraseña</mat-label>
+        <input 
+          formControlName="pw"
+          matInput
+          placeholder="password" 
+          type="password" 
+          required>
+    </mat-form-field>
+    <a href="">Olvidé la contraseña</a>
+    <button 
+      class="btn-login" 
+      type="submit" 
+      mat-raised-button 
+      color="primary"
+      [disabled]="!loginForm.valid"
+    >
+      Acceder
+    </button>
+    <br>
+    <ng-template [ngIf]="wrongInput">
+      <small > Usuario o Contraseña incorrecta</small>
+    </ng-template>
+  </form>
+  

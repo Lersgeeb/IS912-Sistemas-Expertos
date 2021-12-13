@@ -1,0 +1,26 @@
+<app-header></app-header>
+<div>
+    <div class="login">
+        <form [formGroup]="adminForm" (submit)="login()">
+            <mat-form-field class="login-full-width" appearance="fill">
+                <mat-label>Correo</mat-label>
+                <input formControlName="email" matInput placeholder="myemail@gmail.com" type="email" required>
+            </mat-form-field>
+
+            <mat-form-field class="login-full-width" appearance="fill">
+                <mat-label>Contraseña</mat-label>
+                <input formControlName="password" matInput placeholder="password" type="password" required>
+            </mat-form-field>
+
+            <button class="btn-login" type="submit" (click)="login()" mat-raised-button color="primary">Acceder</button>
+        </form>
+    </div>
+    <div class="back">
+        <img src="assets/icons/login/burger-background.jpg" alt="" width="100%" height="100%" class="back-img">
+        <img src="assets/icons/login/Ellipse.png" alt="" class="elip">
+        <img src="assets/icons/login/login-logo.svg" alt="" class="logo">
+        <p><b>Inicia sesión para gestionar las empresas y sus productos. 
+            Ademas de poder llevar  a cabo la selección de las ordenes
+            de manera óptima y eficiente.</b></p>
+    </div>
+</div>

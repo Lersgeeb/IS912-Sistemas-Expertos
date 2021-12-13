@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --main: #FFA41C;
+    --main-ligther: #ebc080;
+    --dark-main: #040707;
+    --border-color: #e7e7e7;
+}
+
+body {
+    padding-top: 5rem;
+    font-family: 'Exo 2', sans-serif;
+}
+
+/*Navbar*/
+.navbar{
+    background-color: var(--dark-main);
+}
+
+.navbar button{
+    background-color: var(--main);
+    color: #131921;
+}
+
+
+/*Categoria*/
+.dropdown-seg{
+    width:97.5%;
+}
+
+.dropdown button{
+    font-weight: 500;
+    font-size: 1.5em;
+    color: #424549;
+    
+    background-color: white;
+    border: var(--border-color) 1px solid;
+    width: 100%;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*CARDS*/
+.card{
+    cursor: pointer;
+    color: var(--dark-main);
+    transition: all 300ms;
+    width: 140px !important;
+}
+.card:hover{
+    background-color: var(--main);
+    color: white;
+}
+
+.card:hover .stars-seg{
+    color: var(--dark-main);
+}
+
+.card-title{
+    font-weight: bold;
+    font-size: 1.2em;
+}
+.card-dev{
+    font-size: 0.9em;
+}
+.stars-seg{
+    transition: all 300ms;
+    font-size: 0.7em;
+    color: var(--main);
+}
+.card-price{
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.cards-seg{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+@media only screen and (max-width: 992px) {
+    .cards-seg{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+@media only screen and (max-width:  768px) {
+    .cards-seg{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+.add-app{
+    font-size: 1.5em;
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    background-color: var(--main);
+    border: none;
+    border-radius: 50%;
+    padding: 10px 14px
+}
+
+.add-app:hover{
+    background-color: var(--dark-main);
+    color: var(--main);
+}
+
+
+.app-header-modal{
+    display: flex;
+
+}
+
+.app-header-modal img{ 
+    width: 120px;
+    height: 120px;
+    margin-right: 1em;
+}
+
+.title-app-modal{
+    font-weight: 600;
+    font-size: 1.7em;
+}
+
+.desc-app-modal{
+    font-weight: 400;
+    font-size: 0.9em;
+}
+
+.dev-app-modal{
+    font-weight: 400;
+    font-size: 0.8em;
+    color: gray;
+}
+
+.price-app-modal{
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+.stars-app-modal{
+    font-size: 1em;
+    color: #689F38;
+}
+
+.stars-app-modal.bad{
+    font-size: 1em;
+    color: #a82c2c;
+}
+
+.break-line{
+    width: 100%;
+    margin: 16px 0px;
+    height: 1px;
+    background-color: var(--border-color);
+}
+
+.comment-user{
+    display: flex;
+    margin: 1.4em 0em;
+}
+
+.app-comment-modal img{
+    margin-right: 1em;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.comment-segment p{
+    font-size: 0.85em;
+    color: gray;
+}
+
+.modal-buttons{
+    display: flex;
+    justify-content: end;
+}
+
+.install-button{
+    background-color: #689F38;
+    border: none;
+}
+.install-button:hover{
+    background-color: #3e661c;
+}

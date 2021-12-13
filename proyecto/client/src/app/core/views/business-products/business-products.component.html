@@ -1,0 +1,50 @@
+<div class="view-pad business-details-header">
+    <app-header></app-header>
+    <app-back-button text="Restaurantes" [route]="backButton"></app-back-button>
+</div>
+<ng-template [ngIf]="showBusiness">
+    <div class="bg-img">
+        <img [src]="business.banner" alt="">
+    </div>
+    <div class="business-details-body">
+        <div class="img-logo">
+            <img [src]="business.logo" alt="">
+        </div>
+        <div class="title business-name">
+            {{business.name}}
+        </div>
+        <div class="nav-group">
+            
+            <div class="nav-link active">
+                Populares
+            </div>
+            
+        </div>
+    </div>
+    <div class="products">
+        <div *ngFor="let product of business.products" class="item-list">
+    
+            <div class="item">
+                <img [src]="product.image" alt="">
+                <div class="item-desc">
+                    <div class="desc">
+                        <div class="name-product">
+                            {{product.name}}
+                        </div>
+                        <div class="price">
+                            L{{product.price}}
+                        </div>
+                    </div>
+                    
+                    <div *ngIf="isAuth" class="btn-add">
+                        <div  (click)="openDialog(product._id)" class="add-button">
+                            <fa-icon [icon]="faPlus"></fa-icon>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</ng-template>
+

@@ -1,0 +1,110 @@
+<select class="select" #t (change)="getBusinessByCategory(t.value)">
+    <option value="">Elija una categoria</option>
+    <option *ngFor="let category of categories" [value]="category._id">{{category.name}}</option>
+    
+</select>
+<button mat-button class="add-business" (click)="openBusinessModal(business)">Agregar empresa</button>
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Nombre </th>
+        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+
+    <!-- Email Column -->
+    <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef> Correo </th>
+        <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+    </ng-container>
+
+    <!-- Phone Number Column -->
+    <ng-container matColumnDef="phone">
+        <th mat-header-cell *matHeaderCellDef> Telefono </th>
+        <td mat-cell *matCellDef="let element"> {{element.phone_number}} </td>
+    </ng-container>
+
+    <!-- Add Product Button -->
+    <ng-container matColumnDef="product">
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell *matCellDef="let element" (click)="$event.stopPropagation()"> <button class="add-product" (click)="open(content,element._id)"><img src="assets/icons/business/product.svg" alt=""></button> </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+<!--Add Product Model-->
+<ng-template #content let-c="close" let-d="dismiss">
+    <div class="modal-header" style="background-color: #224344; color: white;">
+        <h4 id="modal-basic-title" class="title-modal">Agregar producto</h4>
+        <button type="button" class="close" aria-label="Close" style="color: white;" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    </div>
+    <div class="modal-body">
+        <form [formGroup]="addProductForm" (submit)="addProduct()">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Nombre producto</label>
+                <input formControlName="name" type="text" class="form-control " id="exampleInputEmail1 " placeholder="Nombre Producto">
+            </div>
+            <div class="form-group ">
+                <label for="exampleInputPassword1 ">Price</label>
+                <input formControlName="price" type="text" class="form-control " id="exampleInputPassword1 " placeholder="Precio">
+            </div>
+            <div class="form-group ">
+                <label for="exampleInputPassword1 ">Imagen</label>
+                <input formControlName="image" type="text" class="form-control " id="exampleInputPassword1 " placeholder="url Imagen">
+            </div>
+
+        </form>
+    </div>
+    <div class="modal-footer ">
+        <button type="submit" class="btn btn-outline-primary " (click)="addProduct()">Save</button>
+    </div>
+</ng-template>
+
+
+<!--Add Business Modal -->
+<ng-template #business let-c="close" let-d="dismiss">
+    <div class="modal-header" style="background-color: #224344; color: white;">
+        <h4 id="modal-basic-title" class="title-modal">Agregar Empresa</h4>
+        <button type="button" class="close" aria-label="Close" style="color: white;" (click)="d('Cross click')">
+    <span aria-hidden="true">&times;</span>
+  </button>
+    </div>
+    <div class="modal-body">
+        <form [formGroup]="addBusinessForm" (submit)="addBusiness()">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Nombre</label>
+                <input formControlName="name" type="text" class="form-control " id="exampleInputEmail1 " placeholder="Nombre Empresa">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email</label>
+                <input formControlName="email" type="email" class="form-control " id="exampleInputEmail1 " placeholder="Correo electronico">
+            </div>
+            <div class="form-group ">
+                <label for="exampleInputPassword1 ">Logo</label>
+                <input formControlName="logo" type="text" class="form-control " id="exampleInputPassword1 " placeholder="Logo url">
+            </div>
+            <div class="form-group ">
+                <label for="exampleInputPassword1 ">Banner</label>
+                <input formControlName="banner" type="text" class="form-control " id="exampleInputPassword1 " placeholder="Banner url">
+            </div>
+            <div class="form-group ">
+                <label for="exampleInputPassword1 ">Descripción</label>
+                <input formControlName="description" type="text" class="form-control " id="exampleInputPassword1 " placeholder="Descripcion">
+            </div>
+            <div class="form-group ">
+                <label for="exampleInputPassword1 ">Telefono</label>
+                <input formControlName="phone_number" type="text" class="form-control " id="exampleInputPassword1 " placeholder="Telefono">
+            </div>
+
+        </form>
+    </div>
+    <div class="modal-footer ">
+        <button type="submit" class="btn btn-outline-primary " (click)="addBusiness()">Save</button>
+    </div>
+</ng-template>

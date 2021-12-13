@@ -1,0 +1,55 @@
+@import 'variables.scss';
+
+.header-landing{
+    box-sizing: border-box;
+    margin-top: 1.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid $gray-secondary;
+    height: 25em;
+    padding-bottom: 3em;
+    justify-content: space-around;
+    .text-header-landing{
+        padding: 0 1em;
+        line-height: 1.5;
+        text-align: center;
+        font-size: 24px;
+        font-weight: 600;
+        color: $dark-main-color;
+
+    }
+    .btn-access{
+        margin-top: 1em;
+        button{
+            background-color: $main-color;
+            color: white;
+            padding: 0.8em 3em;
+            border-radius: 5px;
+            border: none;
+        }
+    }
+}
+
+.steps{
+    
+    padding-top: 1em;
+    padding-bottom: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .text-title{
+        margin-top: 1em;
+        font-size: 22px;
+        font-weight: 600;
+        color: $dark-main-color;
+    }
+    .line{
+        margin-top: 1em;
+        background-color: $main-color;
+    }
+
+    app-process-step{
+        margin-bottom: 1em;
+    }
+}

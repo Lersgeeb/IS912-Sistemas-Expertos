@@ -1,0 +1,21 @@
+<div class="view-pad">
+    <app-header></app-header>
+    <div class="cat-content">
+        <div class="title-cat">
+            <div class="title"> CATEGORIAS</div>
+            <div class="line"></div>
+        </div>
+        <ng-template [ngIf]="renderCategories">
+            <div class="categories-item">
+                <app-category  
+                    class="cat-item" 
+                    *ngFor="let category of categories" 
+                    name={{category.name}} 
+                    icon={{category.logo}}
+                    (click)="handlerChangeRoute(category._id)" 
+                ></app-category>            
+            </div>
+        </ng-template>
+
+    </div>
+</div>

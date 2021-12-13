@@ -1,0 +1,51 @@
+@import 'variables';
+
+.footer{
+    background-color: $dark-main-color;
+    padding-top: 20px;
+    padding-bottom: 6em;
+    width: 100vw;
+}
+
+.footer-title{
+    padding-left: 50px;
+    padding-right: 50px;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+}
+
+.footer-socialNetworks{
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 5px;
+    color: white;
+    font-size: 14px;
+
+    #footer-item{
+        padding: 10px;
+        height: 27px;
+        width: 27px;
+        padding-left: 50px;
+    }
+}
+
+.footer-phones{
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    color: white;
+    font-size: 14px;
+
+    p{
+        text-align: center;
+    }
+}
+
+.footer-copyrigth{
+    color: $gray-darker;
+    text-align: center;
+    font-size: 12px;
+    padding-top: 25px;
+}

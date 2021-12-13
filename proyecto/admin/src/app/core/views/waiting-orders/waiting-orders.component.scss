@@ -1,0 +1,68 @@
+@import 'variables.scss';
+.all-order-component {
+    width: 30%;
+    padding: 2em 6em;
+    .title-order-list {
+        font-size: 18px;
+        font-weight: 500;
+        color: $dark-main-color;
+        margin-bottom: 2em;
+    }
+}
+
+:host {
+    display: flex;
+}
+
+.item {
+    position: relative;
+    width: 140%;
+    .item-desc {
+        .desc {
+            width: 100%;
+            font-size: 18px;
+            font-weight: 500;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .order-info {
+                display: flex;
+                justify-content: space-between;
+                .price {
+                    color: $main-color;
+                }
+            }
+            .location {
+                font-size: 14px;
+                font-weight: 400;
+                color: $gray-secondary;
+            }
+        }
+        .delivery-info {
+            width: 9em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            img {
+                object-fit: contain;
+                width: 4em;
+                height: 1.5em;
+            }
+            .delivery-name {
+                color: black;
+                font-weight: 600;
+                font-size: 14px;
+            }
+            .delivery-state {
+                background-color: $dark-main-color;
+                color: white;
+                padding: 0.2em 1em;
+                text-align: center;
+                width: 9em;
+                border-radius: 10px;
+                font-size: 14px;
+                font-weight: 500;
+            }
+        }
+    }
+}

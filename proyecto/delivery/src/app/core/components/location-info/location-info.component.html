@@ -1,0 +1,27 @@
+<div *ngIf="showLocation">
+        
+  <app-maps [location]="order.order_info.location"></app-maps>
+
+  <div class="info-container">
+    <div class="data-title">
+      Tienda
+    </div>
+    <div class="data">
+      {{businessName}}
+    </div>
+  </div>
+
+  <div class="info-container">
+    <div class="data-title">
+      Destino
+    </div>
+    <div class="data">
+      <div class="data-item">
+        <strong>Latitud:</strong> {{order.order_info.location.latitude}} <br>
+      </div>
+      <div class="data-item">
+        <strong>Longitud:</strong> {{order.order_info.location.longitude}}
+      </div>
+    </div>
+  </div>
+</div>

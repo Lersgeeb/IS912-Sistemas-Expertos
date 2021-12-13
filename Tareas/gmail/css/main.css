@@ -1,0 +1,263 @@
+:root{
+    --gray-google: #5F6368;
+    --light-gray-google: #f1f3f4;
+    --border-color: #cacaca;
+}
+body{
+    padding: 0;
+    margin: 0;
+
+}
+
+.navbar{
+    border: 1px var(--border-color) solid ;
+    color:var(--gray-google);
+    padding: 10px 0px;
+    display: grid;
+    grid-template-columns: 1fr 6fr;   
+    background-color: white;
+}
+
+.search-input{
+    position: relative;
+    width: 60%;
+    height: 10px;
+    
+}
+
+.i-search{
+    font-size: 0.9em;
+    position: absolute;
+    top: -2px;
+    left: 12px;
+    z-index: 1;
+}
+
+.form-search{
+    position: absolute;
+    top: -14px;
+    padding-left: 45px;
+    width: 100% !important;
+    background-color: var(--light-gray-google);
+    border: none;
+}
+
+.right-nav{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 5fr 1fr;   
+}
+
+.icon-buttons{
+    font-size: 1.2em;
+    display: flex;
+    justify-content: end;
+    margin-right: 2em;
+}
+
+.menu-icon{
+    position: relative;
+    font-size: 0.8em;
+    letter-spacing: 0ch;
+}
+
+.i-dots-1{
+    position: absolute;
+    left: 0px;
+    top: 2px;
+}
+
+.i-dots-2{
+    top: 2px;
+    position: absolute;
+    left: 6px;
+}
+
+.i-dots-3{
+    top: 2px;
+    position: absolute;
+    left: 12px;
+}
+
+/*main*/
+main{
+    width: 100%;
+    margin-top: 4.2em;
+    display: grid;
+    grid-template-columns: 1fr 6fr;  
+}
+
+aside{
+    border-right: var(--border-color) 1px solid;
+    height: 100vh;
+}
+
+aside button{
+    margin-top: 1em;
+    background-color: white;
+    border: #e2e2e2 1px solid;
+    color: #5F6368;
+    border-radius: 15px;
+    width: 11em;
+    height: 2.1em;
+    font-weight: 600;
+    
+}
+
+.section-view{
+    cursor: pointer;
+    width: 12.5em;
+    margin-bottom: 10px;
+    padding-left: 1.7em;
+    color: var(--gray-google);
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-radius: 0 20px 20px 0;
+}
+
+.section-view-active{
+    cursor: pointer;
+    width: 12.5em;
+    margin-bottom: 10px;
+    padding-left: 1.7em;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    background-color: #FCE8E6;
+    font-weight: 700;
+    color: #E0574E;
+    border-radius: 0 20px 20px 0;
+}
+
+.section-view:hover{
+    background-color: var(--light-gray-google);
+}
+
+/*email section*/
+section{
+    position: relative;
+}
+
+.email{
+    display: grid;
+    grid-template-columns: 2fr 4fr 2fr;  
+    color: var(--gray-google);
+    height: 2.8em;
+    align-items: center;
+    border-bottom: var(--border-color) 1px solid;
+    border-right: var(--border-color) 1px solid;
+}
+
+.no-read{
+    font-weight: 600;
+}
+
+.email-star{
+    color: var(--gray-google);
+}
+
+.email-icon{
+    cursor: pointer;    
+
+}
+
+.email-content{
+    font-weight: normal;
+}
+
+.email-trash{
+    color: #E0574E;
+}
+
+.star-active{
+    color: #F4B400;
+}
+
+.spam-active{
+    color: #802923;
+}
+
+.fa-eye{
+    display: none;
+}
+.no-read .fa-eye{
+    display: block;
+}
+
+/*New email*/
+
+
+.new-email{
+    display: none;
+    width: 45em;
+    position: absolute;
+    bottom: 100px;
+    right: 20px;
+}
+
+.new-email.active{
+    display: block;
+}
+
+.new-email .header{
+    font-weight: 600;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    background-color: #3c3e42;
+    color: white;
+    align-items: center;
+    padding: 5px 16px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.new-email .header button{
+    display: flex;
+    background-color: #3c3e42;
+    border: white 2px solid;
+    color: white;   
+}
+
+.form-group{
+    display: flex;
+    justify-content: space-between;
+}
+
+.new-email form{
+    border: var(--border-color) 1px solid;
+    padding: 1em;
+    border-top:none;
+    width: 100%;
+    color: var(--gray-google);
+}
+.new-email form label{
+    font-weight: 500;
+}
+
+.new-email form input{
+    width: 90%;
+    border: #e2e2e2 1px solid;
+}
+
+.new-email form textarea{
+    width: 100%;
+    border: #e2e2e2 1px solid;
+}
+
+.send-button{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.send-button button{
+    margin-top: 1em;
+    background-color: #E0574E;
+    border: none;
+    color: white;
+    border-radius: 15px;
+    width: 11em;
+    height: 2.1em;
+    font-weight: 600;
+    
+}
+

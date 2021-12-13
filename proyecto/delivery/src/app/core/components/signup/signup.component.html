@@ -1,0 +1,56 @@
+<form 
+    [formGroup]="singUpForm" 
+    (submit)="handlerSingUp()" 
+    class="login-form"
+    #singUpFormIdentifier="ngForm"
+>
+    <mat-form-field class="login-full-width" appearance="fill">
+      <mat-label>Nombre Completo</mat-label>
+      <input 
+        matInput 
+        placeholder="ejem. Eduardo Lopez" 
+        type="text" 
+        formControlName="fullName"
+        required>
+    </mat-form-field>
+  
+    <mat-form-field class="login-full-width" appearance="fill">
+        <mat-label>Correo</mat-label>
+        <input 
+            matInput 
+            placeholder="myemail@gmail.com" 
+            type="email" 
+            formControlName="email"
+            required>
+    </mat-form-field>
+
+    <mat-form-field class="login-full-width" appearance="fill">
+        <mat-label>Contraseña</mat-label>
+        <input 
+            matInput 
+            placeholder="password" 
+            type="password" 
+            formControlName="password"
+            required>
+    </mat-form-field>
+    <mat-form-field class="login-full-width" appearance="fill">
+        <mat-label>Verificar Contraseña</mat-label>
+        <input 
+            matInput 
+            placeholder="confirm password" 
+            type="password" 
+            formControlName="checkPw"
+            required>
+    </mat-form-field>
+    <button 
+        class="btn-login" 
+        type="submit" 
+        mat-raised-button 
+        color="primary"
+        [disabled]="!singUpForm.valid"
+    >
+        Acceder
+    </button>
+
+    <small *ngIf="requestSend">Petición de cuenta enviada con éxito</small>
+  </form>

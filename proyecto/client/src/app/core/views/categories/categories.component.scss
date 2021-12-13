@@ -1,0 +1,21 @@
+.cat-content{
+    padding-top: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .title{
+        font-size: 24px;
+    }
+    .categories-item{
+        margin-bottom: 3em;
+        margin-top: 2em;
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2em;
+        row-gap: 1.5em;
+    }
+    .cat-item:active{
+        border-radius: 10px;
+        background-color: rgb(213, 255, 255);
+    }
+}

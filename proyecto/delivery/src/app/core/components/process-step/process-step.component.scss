@@ -1,0 +1,26 @@
+@import 'variables.scss';
+:host{
+    display: flex;
+}
+
+.step-container{
+    display: flex;
+    background-color: white;
+    padding: 1em;
+    border-radius: 1em;
+    .icon-space{
+        margin-right: 2em;
+    }
+    .desc-space{
+        .step{
+            color: $dark-main-color;
+            font-weight: 600;
+            font-size: 18px;
+        }
+        .step-desc{
+            color: $secondary-text;
+            font-weight: 600;
+            font-size: 14px;
+        }
+    }
+}

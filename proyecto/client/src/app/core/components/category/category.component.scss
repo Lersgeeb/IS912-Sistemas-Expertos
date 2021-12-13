@@ -1,0 +1,21 @@
+@import 'variables.scss';
+
+:root{
+    display: block;
+}
+
+.category-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100px;
+    padding: 1.5em 1.5em;
+    border: $main-color 1px solid ;
+    border-radius: 10px;
+    .cat-name{
+        margin-top: 10px;
+        font-weight: 500;
+        font-size: 1.2em;
+    }
+}

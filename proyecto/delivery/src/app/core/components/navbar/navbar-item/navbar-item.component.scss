@@ -1,0 +1,18 @@
+@import 'variables';
+
+:host{
+    display: block;
+}
+
+.navbar-item{
+    
+    svg{
+        fill: $dark-main-color;
+    }
+}
+
+.navbar-item.active{
+    svg{
+        fill: $main-color;
+    }
+}

@@ -1,0 +1,34 @@
+@import 'variables';
+
+.login-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+    margin-top: 1em;
+    a{
+        margin-left: 11em;
+        color: $gray-darker;
+    }
+  }
+  
+  .login-full-width {
+    width: 100%;
+  }
+
+
+  .btn-login{
+      background-color: $main-color;
+      font-size: 18px;
+      margin-top: 4em;
+      margin-left: 4.5em;
+      height: 43px;
+      width: 159px;
+  }
+
+  .btn-access{
+      font-size: 18px;
+      color: $dark-main-color;
+      margin-bottom: 1.8em;
+  }
+
+ 

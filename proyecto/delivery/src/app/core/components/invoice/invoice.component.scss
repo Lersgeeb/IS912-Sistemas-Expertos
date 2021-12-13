@@ -1,0 +1,76 @@
+@import 'variables';
+
+table{
+    width: 100%;
+    font-size: 14px;
+    box-shadow: 3px 3px  #cfc4c46c;
+    box-shadow: 0 0 3px 3px #cfc4c46c;
+    padding-top: 3px;
+    padding-left: 10px;
+    padding-bottom: 30px;
+    border-radius: 3%;
+}
+td{
+    text-align: center;
+    font-size: 14px;
+}
+
+.subs{
+    text-align: left;
+}
+
+hr{
+    width: 235%;
+    border-color: #C4C4C4;
+}
+
+.text-color{
+    color: #224344;
+}
+
+th{
+    font-size: 14px;
+}
+
+.comision-container{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1em;
+    .element{
+        padding: 1em;
+        width: 9em;
+        height: 5.3em;
+        box-shadow: 0 0 3px 3px #cfc4c46c;
+        border-radius: 3%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        .element-title{
+            text-align: center;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        .amount{
+            color: $main-color;
+            font-size: 24px;
+        }
+    }
+}
+
+.total-container{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1em;
+    padding: 1.2em 0;
+    box-shadow: 0 0 3px 3px #cfc4c46c;
+    border-radius: 3%;
+    .element-title{
+        font-weight: 600;
+        font-size: 14px;
+    }
+    .amount{
+        color: $main-color;
+        font-size: 24px;
+    }
+}

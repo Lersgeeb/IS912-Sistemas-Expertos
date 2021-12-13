@@ -1,0 +1,38 @@
+@import 'variables';
+
+.position{
+    width: 46%;
+    float: left;
+    padding-left: 18px;
+    margin-top: 20px;
+}
+
+.lat{
+    padding-left: 0px;
+}
+
+iframe{
+    width: 96%;
+    height: 18em;
+}
+
+.info-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1em;
+    padding: 1.2em 1em;
+    box-shadow: 0 0 3px 3px #cfc4c46c;
+    border-radius: 3%;
+    .data-title{
+        color: $main-color;
+        font-weight: 600;
+        font-size: 18px;
+    }
+    .data{
+        font-size: 1em;
+        color: $dark-main-color;
+        .data-item{
+            margin-top: 0.3em;
+        }
+    }
+}

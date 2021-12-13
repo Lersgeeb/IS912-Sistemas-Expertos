@@ -1,0 +1,29 @@
+@import 'variables';
+
+
+:host{
+    display: flex;
+}
+.back-button-container{
+    .back-button{
+        border-radius: 5px;
+        padding: 0.5em;
+        padding-left: 0px;
+        display: flex;
+        fa-icon{
+            color: $main-color;
+            font-size: 1.5em;
+            margin-right: 0.3em;
+        }
+        .back-text{
+            color: $dark-main-color;
+            font-weight: 600;
+            font-size: 1.2em;
+        }
+    
+    }
+}
+
+.back-button:active{
+    background-color: rgb(243, 243, 243);
+}

@@ -1,0 +1,18 @@
+<div class="view-pad business-cat-header">
+    <app-header></app-header>
+    <app-back-button route='/categories' text="Categorías" ></app-back-button>
+</div>
+<div class="bg-blue">
+    <img [src]="iconSvgRoute" alt="">
+    {{currentCategory.name}}
+</div>
+<div class="view-pad business-container">
+    <div class="business-options-container">
+        <app-business-option 
+            *ngFor="let business of currentCategory.business"
+            [business]="business"
+            (click)="handlerChangeRoute(business._id)"
+        >
+        </app-business-option>
+    </div>
+</div>

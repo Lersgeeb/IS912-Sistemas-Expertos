@@ -1,0 +1,63 @@
+@import 'variables';
+
+ .login-full-width {
+    width: 100%;
+  }
+
+  .login{
+      width: 40%;
+      float: left;
+  }
+
+  form{
+      width: 60%;
+      margin-left: 100px;
+      margin-right: 50px;
+      margin-top: 30%;
+      
+  }
+.btn-login{
+    background-color: $main-color;
+    color: white;
+    margin-left: 9em;
+    margin-top: 4em;
+    width: 30%;
+    border-radius: 3px;
+}  
+
+.back{
+    width: 60%;
+    float: left;
+
+    .back-img{
+        opacity: 0.8;
+    }
+    
+    .elip{
+        padding: 0.3em 0;
+        position: absolute;
+        left: 65%;
+        right: 2px;
+        bottom: 3px;
+        top: 25%;
+        opacity: 0.95;
+    }
+    
+    .logo{
+        padding: 0.3em 0;
+        position: absolute;
+        left: 67.2%;
+        right: 2px;
+        top: 29%;
+    }
+
+    p{
+        font-size: 24px;
+        padding: 0.3em 0;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        color: white;
+    }
+}
+

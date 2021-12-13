@@ -1,0 +1,24 @@
+<div class="order-component">
+    
+    <div *ngIf="renderProductBoolean" class="item-list">
+    
+        <app-order-cart 
+            (needUpdate)="updateCart()"
+            *ngFor="let product of productsOrder"
+            [product]="product"
+        ></app-order-cart>
+        
+        
+    </div>
+    <ng-template [ngIf]="renderProductBoolean">
+        <button class="btn-confirm" routerLink="/commercial-invoice" type="button" mat-raised-button color="primary">Comenzar Orden</button>
+    </ng-template>
+    <ng-template [ngIf]="!renderProductBoolean">
+        <div class="title" style="margin-top: 2em;">
+            No existen productos en el carrito
+        </div>
+        <button class="btn-confirm" routerLink="/categories" type="button" mat-raised-button color="primary">Ir a categorias</button>
+    </ng-template>
+
+</div>
+ 

@@ -1,0 +1,88 @@
+<div class="view-pad">
+    <app-back-button route='/commercial-invoice' text="Factura"></app-back-button>
+    <div>
+        
+        <form
+            [formGroup]="order_info" 
+            (submit)="handlerOrder()" 
+        >
+            <div class="form-order-info">
+
+                <h1><b>Ubicación</b></h1>
+
+                <app-map (setLocation)="setLocation($event)"></app-map>
+
+                <mat-form-field class="position lat" appearance="fill">
+                    <mat-label>Latitud</mat-label>
+                    <input 
+                        matInput 
+                        placeholder="48.5" 
+                        type="text" 
+                        required
+                        formControlName="latitude"
+                    >
+                </mat-form-field>
+            
+                <mat-form-field class="position" appearance="fill">
+                    <mat-label>Longitud</mat-label>
+                    <input 
+                        matInput 
+                        placeholder="15.43" 
+                        type="text" 
+                        required
+                        formControlName="longitude"
+
+                    >
+                </mat-form-field>
+
+                <h1><b>Tarjeta</b></h1>
+                
+
+                <mat-form-field class="card" appearance="fill">
+                    <mat-label>Nro. Tarjeta</mat-label>
+                    <input 
+                        matInput 
+                        placeholder="1123243223" 
+                        type="text" 
+                        required
+                        formControlName="card_number"
+
+                    >
+                </mat-form-field>
+
+                <mat-form-field class="position lat" appearance="fill">
+                    <mat-label>Vencimiento</mat-label>
+                    <input 
+                        matInput 
+                        placeholder="11/23" 
+                        type="text" 
+                        required
+                        formControlName="expired_date"
+
+                    >
+                </mat-form-field>
+
+                <mat-form-field class="position" appearance="fill">
+                    <mat-label>CVV</mat-label>
+                    <input 
+                        matInput 
+                        placeholder="344" 
+                        type="text" 
+                        required
+                        formControlName="cvv"
+
+                    >
+                </mat-form-field>
+            </div>
+
+            <button 
+                class="btn-invoice" 
+                type="submit"
+                mat-raised-button color="primary"
+                [disabled]="!order_info.valid"
+            >
+                Confirmar Compra
+            </button>
+        </form>
+    </div>
+</div>

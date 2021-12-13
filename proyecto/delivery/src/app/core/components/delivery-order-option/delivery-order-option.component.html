@@ -1,0 +1,40 @@
+<div *ngIf="order" class="item">
+    <img [src]="order.business_logo" alt="">
+    <div class="item-desc">
+        <div class="desc">
+            <div class="product-info">
+                <div class="user-fullname">
+                    {{order.business_name}}
+                </div>
+                <div class="location">
+                    {{order.customer_name}}
+                    
+                </div>
+            </div>
+            <div class="order-info">
+                
+               <select [(ngModel)]='selectedState' (change)="handlerChangeState($event)">
+                   <option value='Tomada'>Tomada</option>
+                   <option value='En camino'>En camino</option>
+                   <option value='En origen'>En origen</option>
+                   <option value='En destino'>En destino</option>
+               </select>
+            
+            </div>
+        </div>
+        <div class="more-info">
+            
+            <div class="price">
+                {{order.order.order_products.length}}&nbsp;
+                <div>
+                     Productos
+                </div>
+            </div>
+            
+            <button (click)="showDetails(order.order._id)" >
+                <fa-icon [icon]="faInfoCircle"></fa-icon>
+            </button>
+            
+        </div>
+    </div>
+</div>

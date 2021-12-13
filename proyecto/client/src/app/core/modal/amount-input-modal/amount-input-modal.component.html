@@ -1,0 +1,12 @@
+
+<div mat-dialog-content>
+<p>Cantidad del producto:</p>
+<mat-form-field appearance="fill">
+    <mat-label >#</mat-label>
+    <input matInput [(ngModel)]="data.amount">
+</mat-form-field>
+</div>
+<div mat-dialog-actions>
+<button mat-button (click)="onNoClick()">Cancelar</button>
+<button mat-button  [mat-dialog-close]="data.amount"  cdkFocusInitial>Agregar</button>
+</div>

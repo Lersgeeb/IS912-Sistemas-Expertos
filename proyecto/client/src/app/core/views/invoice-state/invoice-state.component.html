@@ -1,0 +1,9 @@
+<div class="view-pad">
+    <app-back-button route='/cart/orders' text="Mis Ordenes"></app-back-button>
+    <ng-template [ngIf]="showInvoice">
+        <app-invoice [orders]="order.productsDetailed"></app-invoice>
+        <div>
+            <h1><b>{{translateState(order.order_info.delivery_state)}}</b></h1>
+        </div>
+    </ng-template>
+</div>

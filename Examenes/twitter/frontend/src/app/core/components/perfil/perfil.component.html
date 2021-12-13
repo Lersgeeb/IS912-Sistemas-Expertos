@@ -1,0 +1,23 @@
+<div class="component text-center">
+    <div class="component-header">
+      <img [src]="urlImage" class="img-fluid rounded-circle img-thumbnail">
+    </div>
+    <hr>
+    <h2 class="blue-text">{{usuario.nombre}} {{usuario.apellido}}</h2>
+    <small>{{usuario.usuario}}</small>
+    <hr>
+    <div class="row">
+        <div class="col-lg-4">
+            Tweets<br>
+            <span class="blue-text">{{usuario.tweets }}</span>
+        </div>
+        <div class="col-lg-4">
+            Following<br>
+            <span class="blue-text">{{followingAmount}}</span>
+        </div>
+            <div class="col-lg-4">
+                Followers<br>
+                <span class="blue-text">{{followersAmount}}</span>
+        </div>
+    </div>
+</div>

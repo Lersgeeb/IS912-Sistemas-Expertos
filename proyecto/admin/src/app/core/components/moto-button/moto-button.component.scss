@@ -1,0 +1,19 @@
+@import 'variables.scss';
+.moto-btn{
+    display: flex;
+    height: 4.5em;
+    width: 4.5em;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $gray-secondary;
+    border-radius: 10px;
+    svg{
+        fill: $gray-secondary;
+    }
+}
+.moto-btn.active{
+    border: 1px solid $dark-main-color;
+    svg{
+        fill: $dark-main-color;
+    }
+}

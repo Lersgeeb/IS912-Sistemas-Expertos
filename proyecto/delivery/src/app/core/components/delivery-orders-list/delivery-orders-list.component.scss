@@ -1,0 +1,15 @@
+@import 'variables';
+
+.delivery-order-list{
+    .list{
+        .item-list{
+            margin-bottom: 2em;
+        }
+        .list-name{
+            font-size: 18px;
+            font-weight: 600;
+            color: $dark-main-color;
+            margin-bottom: 1em;
+        }
+    }
+}

@@ -1,0 +1,16 @@
+<div class="navbar">
+    <app-navbar-item routerLink="/categories" [isActive]="navStatus.categoriesActive" iconName="principal"></app-navbar-item>
+    <app-navbar-item routerLink="/" [isActive]="navStatus.homeActive" iconName="home"></app-navbar-item>
+    <ng-template *ngIf="userIsAuth; then userAuth else userNotAuth"></ng-template>
+</div>
+
+<ng-template #userAuth>
+    <app-navbar-item routerLink="/cart/order" [isActive]="navStatus.cartActive" iconName="cart"></app-navbar-item>
+    <app-navbar-item iconName="logout" (click)="handlerLogOut()"></app-navbar-item>
+</ng-template>
+
+<ng-template #userNotAuth>
+    <app-navbar-item routerLink="/access/login" [isActive]="navStatus.accessActive" iconName="user"></app-navbar-item>
+</ng-template>
+
+

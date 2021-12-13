@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gmail</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/all.css"><!--FontAwesome-->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <nav class=" navbar-expand-md fixed-top  navbar">
+        <div>
+            <i class="fas fa-bars mr-3 ml-4"></i>
+            <a class="navbar-brand" href="#">
+                <img src="./img/logo.png" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <div class="right-nav form-inline my-2 my-lg-0">
+                
+                <div class="search-input">
+                    <i class="i-search fas fa-search"></i>
+                    <input class="form-control form-search" type="text" placeholder="Buscar correo" aria-label="Search">
+                </div>
+                
+                <div>
+                    <div class="icon-buttons">
+                        <i class="far fa-question-circle  ml-3"></i>
+                        <i class="fas fa-cog  ml-3"></i>
+                        <span class="menu-icon ml-3">
+                            <i class="fas fa-ellipsis-v i-dots-1"></i>
+                            <i class="fas fa-ellipsis-v i-dots-2"></i>
+                            <i class="fas fa-ellipsis-v i-dots-3"></i>
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        </nav>
+        
+        <main role="main">
+            
+            <aside>
+                
+                <button class="ml-4" onclick="showNewEmailWindow()">Redactar</button>
+                
+                <div class="sections-gmail mt-3" id="view-selector">
+                    <div class="section-view-active "> 
+                        <i class="far fa-envelope mr-2"></i>
+                        Recibidos (40)
+                    </div>
+                    <div class="section-view"> 
+                        <i class="far fa-paper-plane mr-2"></i>
+                        Enviados
+                    </div>
+                    <div class="section-view">
+                        <i class="far fa-star mr-2"></i>
+                        Destacados
+                    </div>
+                    <div class="section-view">
+                        <i class="fas fa-exclamation-triangle mr-2"></i>
+                        Spam
+                    </div>
+                    <div class="section-view">
+                        <i class="far fa-trash-alt mr-2"></i>
+                        Papelera
+                    </div>
+                </div>
+            </aside>
+            <section>
+                <div id="emails-div">
+                    <div class="email no-read">
+                        <div class="d-flex align-items-center pl-4">
+                            <i class="far fa-star mr-2 star-active email-icon"></i>
+                            <i class="fas fa-exclamation-triangle mr-2 email-icon spam-active"></i>
+                            <div >Juan Perez</div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <div>Tarea primer parcial -&nbsp</div>
+                            <div class="email-content">Lorem ipsum dolor sit amen</div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-end pr-5">
+                            <i class="far fa-eye mr-3 email-icon"></i>
+                            <div class="email-time">10:00am</div>
+                            <i class="far fa-trash-alt ml-3 email-trash email-icon"></i>
+                        </div>
+                    </div>
+
+                    <div class="email">
+                        <div class="d-flex align-items-center pl-4">
+                            <div >Juan Perez</div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <div>Tarea primer parcial -&nbsp</div>
+                            <div class="email-content">Lorem ipsum dolor sit amen</div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-end pr-5">
+                            <div class="email-time">10:00am</div>
+                            <i class="far fa-trash-alt ml-3 email-trash email-icon"></i>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="new-email" id="new-email-window">
+                    <div class="header">
+                        <div>Mensaje nuevo</div> 
+                        <button onclick="closeNewEmailWindow()"><i class="fas fa-times"></i></button>
+                    </div> 
+                    <form action="">
+                        <div class="form-group">
+                            <label for="name-input">De:</label>
+                            <input type="text" id="name-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="from-input">De:</label>
+                            <input type="text" id="from-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="to-input">Para:</label>
+                            <input type="text" id="to-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="matter-input">Asunto:</label>
+                            <input type="text" id="matter-input">
+                        </div>
+    
+                        <div class="">
+                            <label for="content-input">Mensaje:</label>
+                            <div>
+                                <textarea name="" id="content-input" cols="30" rows="10"></textarea>
+                            </div>
+                        </div>
+                        <div class="send-button">
+                            <button onclick="sendEmail()">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+
+            </section>
+            
+      
+        </main><!-- /.container -->
+    <!-- <script src="js/jquery-3.4.1.min.js"></script> -->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/controlador.js"></script>
+</body>
+</html>

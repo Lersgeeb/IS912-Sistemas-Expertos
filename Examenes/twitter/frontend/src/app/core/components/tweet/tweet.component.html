@@ -1,0 +1,15 @@
+<div class="row component text-left">
+    <div class="col-lg-2">  
+      <img [src]="urlImage" class="img-fluid rounded-circle img-thumbnail">
+    </div>
+    <div class="col-lg-10">
+      <b>{{tweet.usuario.nombre}}</b> {{tweet.usuario.usuario}}
+      <div class="tweet-content">
+        <div [innerHTML]="innnerTweetContent"></div>
+        
+          <div >
+              <small *ngFor="let hashtag of hashtagList" class="blue-text"> {{hashtag}}</small>
+          </div>
+      </div>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+<div class="view-pad">
+    <app-header></app-header>
+    <div class="header-landing">
+        <div class="landing-icon">
+            <img src="assets/icons/landingpage/landing-icon.svg" alt="landing-icon">
+        </div>
+        <div class="text-header-landing">
+            ¿Quieres hacer entregas de pedido?
+        </div>
+        <div class="btn-access title">
+            <button routerLink="/orders/order-list">Ver Ordenes</button>
+        </div>
+    </div>
+</div>
+<div class="steps">
+    <div class="title-trend">
+        <div class="text-title">PROCESO DE ENVIO</div>
+        <div class="line"></div>
+    </div>
+
+    <div class="steps-list view-pad">
+        <app-process-step *ngFor="let step of steps" [step]="step"></app-process-step>
+    </div>
+</div>
+
+<app-footer></app-footer>

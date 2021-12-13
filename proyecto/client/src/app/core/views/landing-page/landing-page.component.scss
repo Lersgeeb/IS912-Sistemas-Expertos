@@ -1,0 +1,86 @@
+@import 'variables';
+
+.landing-page-view{
+    .landing-header > *{
+        margin-bottom: 0.5em;
+    }
+    .landing-header{
+        padding-top: 1em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .branding-text{
+            text-align: center;
+            margin-bottom: 2em;
+            font-size: 21px;
+            color: $dark-main-color;
+            .highlight{
+                color: $main-color;
+            }
+        }
+        button{
+            padding: 0.8em;
+            background-color: $main-color;
+            color: white;
+            font-size: 21px;
+            font-weight: 500;
+            border: none;
+            border-radius: 10px;
+        }
+    }
+    .features{
+        margin-top: 1em ;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        .feature-item{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .feature-text{
+                font-size: 19px;
+            }
+        }
+    }
+    .categories-trend{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .title{
+            margin-top: 1.2em;
+            font-size: 28px;
+        }
+    }
+    .categories-items{
+        margin-bottom: 3em;
+        margin-top: 2em;
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2em;
+        row-gap: 2em;
+    }
+}
+
+.steps{
+    background-color: $main-color;
+    padding-top: 1em;
+    padding-bottom: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .text-title{
+        margin-top: 1em;
+        font-size: 22px;
+        font-weight: 700;
+        color: white;
+    }
+    .line{
+        margin-top: 1em;
+        background-color: white;
+    }
+
+    app-process-step{
+        margin-bottom: 1em;
+    }
+}

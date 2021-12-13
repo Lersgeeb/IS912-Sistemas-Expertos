@@ -1,0 +1,45 @@
+@import 'variables';
+table {
+    width: 60%;
+    margin-top: 100px;
+    margin-left: 20em;
+}
+
+.add-product {
+    background-color: $main-color;
+    border-color: $main-color;
+}
+
+mat-paginator {
+    background-color: #fafafa;
+    margin-top: 90px;
+}
+
+.paginator {
+    width: 60%;
+}
+
+.select {
+    width: 40%;
+    height: 6%;
+    text-align: center;
+    margin-top: 60px;
+    margin-left: 18%;
+    background-color: $dark-main-color;
+    color: white;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.add-business {
+    background-color: $main-color;
+    margin-left: 15%;
+    font-size: 18px;
+    color: white;
+}
+
+.title-modal {
+    font-size: 20px;
+    padding-top: 10px;
+    text-align: center;
+}

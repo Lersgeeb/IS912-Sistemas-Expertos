@@ -1,0 +1,60 @@
+@import 'variables';
+:host{
+    display: flex;
+}
+
+.item{
+    position: relative;
+    width: 100%;
+    .item-desc{
+        .desc{
+            width: 100%;
+            font-size: 18px;
+            font-weight: 500;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .location{
+                font-size: 14px;
+                font-weight: 400;
+                color: $gray-secondary;
+            }
+            .order-info{
+                display: flex;
+                justify-content: space-between;
+                select{
+                    font-size: 0.8em;
+                    background-color: $dark-main-color;
+                    color: white;
+                    padding: 0 1em;
+                    border-radius: 5px;
+                }
+                select:focus-visible{
+                    border: none;
+                }
+
+            }
+            
+        }
+        .more-info{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-end;
+            button{
+                background-color: $main-color;
+                color: white;
+                padding: 0.5em;
+                border: none;
+                border-radius: 10px;
+            }
+            .price{
+                width: auto;
+                display: flex;
+                
+                font-size: 0.8em;
+                color: $main-color;
+            }
+        }
+    }
+}

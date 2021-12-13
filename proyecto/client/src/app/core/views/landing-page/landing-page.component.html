@@ -1,0 +1,60 @@
+ <div class="landing-page-view view-pad">
+
+    <app-header></app-header>
+    <div class="landing-header">
+        <div>
+            <img src="assets/icons/landing/truck.svg" alt="">
+        </div>
+        <div class="branding-text">
+            Pide lo que <span class="highlight">quieras</span>, <br>
+            en <span class="highlight">cualquier</span> momento <br>
+            <span class="highlight">al lugar</span> que desees.
+        </div>
+        <div>
+            <button>Ver categorias</button>
+        </div>
+    </div>
+    <div class="features">
+        <div class="feature-item">
+            <div><img src="assets/icons/landing/clock.svg" alt=""></div>
+            <div class="feature-text" >Rápido</div>
+        </div>
+        <div class="feature-item">
+            <div><img src="assets/icons/landing/shield.svg" alt=""></div>
+            <div class="feature-text" >Seguro</div>
+        </div>
+        <div class="feature-item">
+            <div><img src="assets/icons/landing/armchair.svg" alt=""></div>
+            <div class="feature-text" >Cómodo</div>
+        </div>
+    </div>
+
+    <div class="categories-trend">
+        <div class="title-trend">
+            <div class="title">POPULARES</div>
+            <div class="line"></div>
+        </div>
+        <div class="categories-items">
+            <app-category  *ngFor="let category of categories" name={{category.name}} icon={{category.icon}}></app-category>            
+        </div>
+
+    </div>
+    
+ </div>
+
+ <div class="steps">
+    <div class="title-trend">
+        <div class="text-title">¡Haz una encargo!</div>
+        <div class="line"></div>
+    </div>
+
+    <div class="steps-list view-pad">
+        <app-process-step *ngFor="let step of steps" [step]="step"></app-process-step>
+    </div>
+</div>
+<div class="view-pad">
+    <app-popular-business></app-popular-business>
+</div>
+
+<app-footer></app-footer>
+ 

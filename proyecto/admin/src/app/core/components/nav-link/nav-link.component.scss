@@ -1,0 +1,16 @@
+@import 'variables.scss';
+
+.nav-link-component{
+    .nav-name{
+        color: $gray-darker;
+        border-bottom: 2px solid $gray-darker;
+        font-weight: 600;
+        font-size: 18px;
+        padding-bottom:4px;
+    }
+    .nav-name.active{
+        color: $dark-main-color;
+        border-bottom: 2px solid $main-color;
+
+    }
+}

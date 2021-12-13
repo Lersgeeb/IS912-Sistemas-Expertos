@@ -1,0 +1,59 @@
+<table>
+    <tr>
+      <td colspan="3">
+        <h3><b>Ordenes</b></h3>
+      </td>
+    </tr>
+    <tr>
+      <th class="subs">Orden</th>
+      <th>Cantidad</th>
+      <th>Precio</th>
+    </tr>
+      <tr *ngFor="let order of orders">
+        <td class="subs text-color">{{order.info.name}}</td>
+        <td class="text-color">{{order.amount}}</td>
+        <td class="text-color">L.{{order.info.price}}</td>
+      </tr>
+      <hr>
+      <tr>
+        <td colspan="2" class="subs">Subtotal</td>
+        <td class="text-color">L.{{sub}}</td>
+      </tr>
+      <tr>
+        <td colspan="2" class="subs">ISV</td>
+        <td class="text-color">L.{{isv}}</td>
+      </tr>
+      <hr>
+      <tr>
+        <td colspan="2" class="subs"><b>Precio Total Ordenes</b></td>
+        <td class="text-color">L.{{totalOrders}}</td>
+      </tr>
+      
+</table>
+  <div class="comision-container">
+    <div class="element">
+      <div class="element-title">
+        Comisión  <br> Total
+      </div>
+      <div class="amount">
+        L. {{total_commision}}
+      </div>
+    </div>
+    <div class="element">
+      <div class="element-title">
+        Comisión Obtenida
+      </div>
+      <div class="amount">
+        L. {{delivery_commision}}
+      </div>
+    </div>
+  </div>
+  
+  <div class="total-container">
+    <div class="element-title">
+      total a Cobrar
+    </div>
+    <div class="amount">
+      L. {{total}}
+    </div>
+  </div>

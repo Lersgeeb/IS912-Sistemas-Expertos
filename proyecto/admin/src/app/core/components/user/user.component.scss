@@ -1,0 +1,30 @@
+@import 'variables.scss';
+
+:host{
+    display: block;
+}
+
+.user-component{
+    display: grid;
+    background-color: white;
+    border-radius: 20px;
+    padding: 1.5em;
+    grid-template-columns: 1fr 4fr 1fr;
+    font-size: 18px;
+    font-weight: 700;
+    .user-icon{
+        svg{   
+            fill: $gray-secondary;
+        }
+    }
+    
+}
+
+.user-component.active{
+    border: 1px solid $dark-main-color ;
+    .user-icon{
+        svg{   
+            fill: $dark-main-color;
+        }
+    }
+}

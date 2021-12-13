@@ -1,0 +1,35 @@
+<div class="delivery-order-list">
+    <div class="list">
+        <div class="list-name">No finalizadas</div>
+        <div class="item-list">
+
+            <ng-template [ngIf]="isEmpty(pendingOrders)">
+                No existen entregas en proceso
+            </ng-template>
+
+            <ng-template [ngIf]="!isEmpty(pendingOrders)">
+                <app-delivery-order-option 
+                    (needUpdate)="updateDeliveries()"
+                    *ngFor="let order of pendingOrders" [order]="order"
+                ></app-delivery-order-option>
+            </ng-template>
+        </div>
+    </div>
+    
+    <div class="list">
+        <div class="list-name">Finalizadas</div>
+        <div class="item-list">
+            <ng-template [ngIf]="isEmpty(doneOrders)">
+                No existen entregas finalizadas
+            </ng-template>
+
+            <ng-template [ngIf]="!isEmpty(doneOrders)">
+                <app-delivery-order-option 
+                    (needUpdate)="updateDeliveries()"
+                    *ngFor="let order of doneOrders" [order]="order"
+                ></app-delivery-order-option>
+            </ng-template>
+        </div>
+    </div>
+        
+</div>
